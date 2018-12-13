@@ -1,0 +1,205 @@
+@import "compass/css3";
+
+body {
+    
+    
+    background-image: url(../back.png);
+    color: white;
+    background-position: center;
+    height: 100%;
+    font-family: Xolonium;
+}
+
+.overflow {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}   
+
+.star-wars {
+  
+    font-family: Xolonium;
+  /* Flexbox to center the entire element on the screen */
+  display: flex;
+  justify-content: center;
+  /* This is a magic number based on the context in which this snippet is used and effects the perspective */
+  height: 800px;
+  /* This sets allows us to transform the text on a 3D plane, and is somewhat a magic number */
+  perspective: 400px;
+  /* The rest is totally up to personal styling preferences */
+  color: white;
+  
+  font-size: 350%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+
+/* We're calling this animation "crawl" */
+@keyframes crawl {
+  0% {
+    /* The element starts below the screen */
+    top: 0;
+    /* Rotate the text 20 degrees but keep it close to the viewer */
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% { 
+    /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
+    top: -6500px;
+    /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
+    transform: rotateX(25deg) translateZ(-2500px);
+     
+  }
+}
+
+.crawl {
+
+    /* Position the element so we can adjust the top property in the animation */
+  position: relative;
+  /* Defines the skew origin at the very center when we apply transforms on the animation */
+  transform-origin: 50% 100%;
+  /* Adds the crawl animation,*/
+  animation: crawl 40s linear infinite;
+  
+}
+
+.fade {
+    overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 100%);
+  z-index: 1;
+}
+
+h1 {
+    
+    margin-left:20px
+}
+
+.center {
+    text-align:center;
+    display:block;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color:  #ffffff00;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color:  #ffffff00;
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: tomato;
+}
+
+li {
+    display: inline;
+}
+
+mark {
+    background-color: black;
+    color: white;
+}
+
+@font-face {
+    font-family: 'Xolonium';
+    src: url('../Xolonium-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    position: relative;
+    width: auto;
+    text-align:center;
+    display:block;
+}
+
+.hoverimage {
+    
+    text-align:center;
+    
+}
+
+.overlay {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: 
+    translate(-50%, -50%);
+    -ms-transform:
+    translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.bottomnav {
+    background-color:  black;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+/* Style the links inside the navigation bar */
+.bottomnav a {
+    
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display:inline-block;
+    
+}
+
+/* Change the color of links on hover */
+.bottomnav a:hover {
+    background-color:  #ffffff00;
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.bottomnav a.active {
+    background-color: #4CAF50;
+    color: tomato;
+}
