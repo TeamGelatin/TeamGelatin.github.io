@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nexus</title>
+        <link rel="stylesheet" type="text/css" href="spooky.css">
+        <link rel="icon" href="tglogoicon.png">
+        <script>
+            function doHide(){
+                document.getElementById( "imgToHide" ).style.display = "none" ;
+            }
+
+            function hideImage(){
+                //  5000 = 5 seconds
+                setTimeout( "doHide()", 5000 ) ;
+            }
+            
+            /*window.onload=function()  //executes when the page finishes loading
+            {
+                setTimeout(func1, 5000);  //sets a timer which calls function func1 after 2,000 milliseconds = 2 secs.
+
+            };
+            function func1()
+            {
+                document.getElementById("content").className="show";
+            }*/
+        </script>
+    </head>
+    <body onload="javascript:hideImage()">
+        <img id="imgToHide" class="bg" src="loadalt.gif">
+        <div id="showMe">
+            <p><a href="Updates/index.html">Back</a></p>
+            <h1>Welcome to Nexus</h1>
+            <h2>NEXUS</h2>
+            <p>It's a something, sort of a general info management thing. Featuring cool updates and more info, and hints</p>
+            <p>Maybe this is another updates page, who knows. The one thing we know for sure is I'll be adding more to this.</p>
+            <br />
+            <div class="center"><img src="shrugchef.jpg"></div>
+        </div>
+    </body>
+</html>
