@@ -29,7 +29,7 @@ body {
   /* The rest is totally up to personal styling preferences */
   color: white;
   
-  font-size: 350%;
+  font-size: 550%;
   font-weight: 600;
   letter-spacing: 6px;
   line-height: 150%;
@@ -61,8 +61,15 @@ body {
   /* Defines the skew origin at the very center when we apply transforms on the animation */
   transform-origin: 50% 100%;
   /* Adds the crawl animation,*/
-  animation: crawl 40s linear infinite;
+  animation: crawl 37s linear infinite;
   
+}
+
+.crawl:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
 }
 
 .fade {
@@ -115,6 +122,20 @@ h1 {
 
 li {
     display: inline;
+    text-decoration: none;
+    color: white;
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+  text-decoration: none;
 }
 
 mark {
