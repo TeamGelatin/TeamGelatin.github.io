@@ -40,6 +40,7 @@ h1 {
 .topnav a:hover {
     background-color:  #ffffff00;
     color: white;
+    text-shadow: 0 0 20px #fff, 0 0 30px #0ff;
 }
 
 /* Add a color to the active/current link */
@@ -50,6 +51,167 @@ h1 {
 
 li {
     display: inline;
+}
+
+.golink a {
+  /*color: white;
+  background-color: #ffffff00;*/
+  /*overflow:visible;*/
+  /*text-shadow: 1.25px 1.25px #0ff;
+  width: 150px;
+    height: 1px;
+    /*background-color: #fff;*/
+
+    /*box-shadow: 0px 25px 5px .01px #0ff;
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #0ff;
+}
+ 
+.golink a:hover {
+  /*pulse on hover*/
+  /*-webkit-animation: pulse 3s infinite;*/
+  -webkit-animation: pulse 1s ease-in-out infinite alternate;
+}
+
+.backlink a {
+  /*color: white;
+  background-color: #ffffff00;*/
+  /*overflow:visible;*/
+  /*text-shadow: 1.25px 1.25px #0ff;
+  width: 150px;
+    height: 1px;
+    /*background-color: #fff;*/
+
+    /*box-shadow: 0px 25px 5px .01px #0ff;
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #08a15c;
+}
+ 
+.backlink a:hover {
+  /*pulse on hover*/
+  /*-webkit-animation: pulse 3s infinite;*/
+  -webkit-animation: pulseback 1s ease-in-out infinite alternate;
+}
+
+.lorelink {
+  text-shadow:.25px .25px 5px #000, 1px 1px 10px #0ff;
+}
+.lorelink a:hover {
+  -webkit-animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+  /*TODO: add more frames*/
+  /*0% { text-shadow:1px 1px 10px #fff, 1px 1px 10px #0ff; }
+  50% { text-shadow:10px 10px 10px #fff, 10px 10px 10px #0ff; }
+  100% { text-shadow:1px 1px 10px #fff, 1px 1px 10px #0ff; }*/
+  /*from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }*/
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0ff;
+  }
+}
+
+@-webkit-keyframes pulseback {
+  /*TODO: add more frames*/
+  /*0% { text-shadow:1px 1px 10px #fff, 1px 1px 10px #0ff; }
+  50% { text-shadow:10px 10px 10px #fff, 10px 10px 10px #0ff; }
+  100% { text-shadow:1px 1px 10px #fff, 1px 1px 10px #0ff; }*/
+  /*from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }*/
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #08a15c;
+  }
+}
+
+.sidenav {
+  /*float: left;
+  width: 50px;
+  overflow: hidden;*/
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff00;
+  overflow-x: hidden;
+  padding-top: 20px; 
+  padding-bottom: 20px;
+  border: 1px solid white;
+  margin-left: 10px;
+  background-color: black;
+}
+
+.big {
+  font-size: 25px;
+}
+
+.projecttitle {
+
+}
+.projecttitle a:hover{
+  -webkit-animation: pulse 1s ease-in-out infinite alternate;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  display: block;
+  font-size: 17px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+.lorecontent {
+  /*float: right;
+  width: auto;*/
+  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-right: 10px;
+  font-size: 15px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  border: 1px solid white;
+  overflow-wrap: break-word;
+}
+
+.overflow {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 
+
+.fade {
+  overflow: hidden;
+position: fixed;
+width: 100%;
+min-height: 200vh;
+top: 100px;
+background-image: linear-gradient(transparent, black 60%);
+z-index: 1;
 }
 
 mark {
@@ -70,6 +232,11 @@ mark {
     text-align:center;
     display:inline-block;
     width: 100%;
+}
+
+.group {
+    text-align:center;
+    padding: 50px;
 }
 
 .hoverimage {
@@ -210,6 +377,7 @@ mark {
 .bottomnav a:hover {
   background-color:  #ffffff00;
   color: white;
+  text-shadow: 0 0 20px #fff, 0 0 30px #0ff;
 }
 
 /* Add a color to the active/current link */
@@ -242,3 +410,4 @@ a {
 .content {
     
 }
+

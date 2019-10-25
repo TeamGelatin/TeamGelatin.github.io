@@ -9,12 +9,29 @@ body {
     height: 100%;
     font-family: Xolonium;
 }
-
+ 
 .overflow {
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
-}   
+}  
+ 
+.teamlink {
+  padding: 45px;
+}
+
+.teamlink:hover {
+    -webkit-animation: pulse 1s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes pulse {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #0ff;
+    }
+  }
 
 .star-wars {
   
@@ -61,7 +78,7 @@ body {
   /* Defines the skew origin at the very center when we apply transforms on the animation */
   transform-origin: 50% 100%;
   /* Adds the crawl animation,*/
-  animation: crawl 37s linear infinite;
+  animation: crawl 45s linear infinite;
   
 }
 
@@ -112,6 +129,7 @@ h1 {
 .topnav a:hover {
     background-color:  #ffffff00;
     color: white;
+    text-shadow: 0 0 20px #fff, 0 0 30px #0ff;
 }
 
 /* Add a color to the active/current link */
@@ -218,6 +236,7 @@ mark {
 .bottomnav a:hover {
     background-color:  #ffffff00;
     color: white;
+    text-shadow: 0 0 20px #fff, 0 0 30px #0ff;
 }
 
 /* Add a color to the active/current link */
